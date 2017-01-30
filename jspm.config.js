@@ -8,7 +8,8 @@ SystemJS.config({
   },
   packages: {
     "app": {
-      "format": "system"
+      "format": "system",
+      "main": "index.js"
     }
   }
 });

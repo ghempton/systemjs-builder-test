@@ -1,5 +1,7 @@
-System.register(['react', 'react-dom', 'app'], function (_export, _context) {
+System.register(['react', 'react-dom'], function (_export, _context) {
   "use strict";
+
+  console.log("Index");
 
   var React, ReactDOM;
   return {
