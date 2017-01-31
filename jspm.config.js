@@ -1,6 +1,7 @@
 SystemJS.config({
   paths: {
     "npm:": "jspm_packages/npm/",
+    "github:": "jspm_packages/github/",
     "app/": "src/"
   },
   browserConfig: {
@@ -8,7 +9,7 @@ SystemJS.config({
   },
   packages: {
     "app": {
-      "format": "system"
+      "format": "register"
     }
   }
 });
@@ -16,7 +17,8 @@ SystemJS.config({
 SystemJS.config({
   packageConfigPaths: [
     "npm:@*/*.json",
-    "npm:*.json"
+    "npm:*.json",
+    "github:*/*.json"
   ],
   map: {
     "assert": "npm:jspm-nodelibs-assert@0.2.0",
@@ -34,6 +36,7 @@ SystemJS.config({
     "process": "npm:jspm-nodelibs-process@0.2.0",
     "react": "npm:react@15.4.2",
     "react-dom": "npm:react-dom@15.4.2",
+    "react-sizeme": "github:getoutreach/react-sizeme@uncompressed",
     "stream": "npm:jspm-nodelibs-stream@0.2.0",
     "string_decoder": "npm:jspm-nodelibs-string_decoder@0.2.0",
     "url": "npm:jspm-nodelibs-url@0.2.0",
