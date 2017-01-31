@@ -1,4 +1,4 @@
-System.register(['react', 'react-dom'], function (_export, _context) {
+System.register(['react', 'react-dom', 'app/fixtures/test.json'], function (_export, _context) {
   "use strict";
 
   var React, ReactDOM;

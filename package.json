@@ -3,6 +3,7 @@
     "name": "app",
     "main": "app.js",
     "dependencies": {
+      "json": "github:systemjs/plugin-json@^0.2.3",
       "react-dom": "npm:react-dom@^15.4.2"
     },
     "devDependencies": {},
@@ -46,6 +47,7 @@
     }
   },
   "devDependencies": {
-    "systemjs-builder": "^0.16.1"
+    "systemjs-builder": "git+ssh://github.com/systemjs/builder.git#0f553a3e3e0ec850e5c532fe9eb4620150159330",
+    "testem": "^1.14.3"
   }
 }

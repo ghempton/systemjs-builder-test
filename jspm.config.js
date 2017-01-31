@@ -8,7 +8,12 @@ SystemJS.config({
   },
   packages: {
     "app": {
-      "format": "system"
+      "format": "register",
+      "meta": {
+        "*.json": {
+          "loader": "json"
+        }
+      }
     }
   }
 });
