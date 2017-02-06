@@ -3,18 +3,20 @@
     "name": "app",
     "main": "app.js",
     "dependencies": {
-      "json": "github:systemjs/plugin-json@^0.2.3",
-      "react-dom": "npm:react-dom@^15.4.2",
-      "react-sizeme": "github:getoutreach/react-sizeme@uncompressed"
+      "chai-enzyme": "npm:chai-enzyme@^0.6.1",
+      "json": "github:systemjs/plugin-json@^0.2.3"
     },
     "devDependencies": {},
     "peerDependencies": {
       "assert": "npm:jspm-nodelibs-assert@^0.2.0",
       "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
+      "chai": "npm:chai@^3.0.0",
+      "cheerio": "npm:cheerio@0.22",
       "child_process": "npm:jspm-nodelibs-child_process@^0.2.0",
       "constants": "npm:jspm-nodelibs-constants@^0.2.0",
       "crypto": "npm:jspm-nodelibs-crypto@^0.2.0",
       "domain": "npm:jspm-nodelibs-domain@^0.2.0",
+      "enzyme": "npm:enzyme@^2.0.0",
       "events": "npm:jspm-nodelibs-events@^0.2.0",
       "fs": "npm:jspm-nodelibs-fs@^0.2.0",
       "http": "npm:jspm-nodelibs-http@^0.2.0",
@@ -23,6 +25,8 @@
       "path": "npm:jspm-nodelibs-path@^0.2.0",
       "process": "npm:jspm-nodelibs-process@^0.2.0",
       "react": "npm:react@^15.4.2",
+      "react-addons-test-utils": "npm:react-addons-test-utils@^15.0.0",
+      "react-dom": "npm:react-dom@^15.4.2",
       "stream": "npm:jspm-nodelibs-stream@^0.2.0",
       "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.0",
       "url": "npm:jspm-nodelibs-url@^0.2.0",
@@ -40,15 +44,29 @@
           "_stream_transform": "readable-stream/transform"
         }
       },
+      "npm:enzyme@2.7.1": {
+        "map": {
+          "react/addons": "@empty",
+          "react/lib/ExecutionEnvironment": "@empty",
+          "react/lib/ReactContext": "@empty"
+        }
+      },
       "npm:inherits@2.0.3": {
         "ignore": [
           "test.js"
         ]
+      },
+      "npm:lodash@4.17.4": {
+        "map": {
+          "buffer": "@empty",
+          "process": "@empty"
+        }
       }
     }
   },
   "devDependencies": {
     "jspm": "^0.17.0-beta.38",
+    "systemjs": "^0.20.5",
     "systemjs-builder": "0.16.2",
     "testem": "^1.14.3"
   }

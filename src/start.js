@@ -1,17 +1,17 @@
-System.register(['react', 'react-dom', 'react-sizeme'], function (_export, _context) {
+System.register(['react', 'react-dom', 'chai-enzyme'], function (_export, _context) {
   "use strict";
 
-  var React, ReactDOM, sizeMe;
+  var React, ReactDOM, chaiEnzyme;
   return {
     setters: [function (_react) {
       React = _react.default;
     }, function (_reactDom) {
       ReactDOM = _reactDom.default;
-    }, function (_reactSizeMe) {
-      sizeMe = _reactSizeMe.default;
+    }, function (_chaiEnzyme) {
+      chaiEnzyme = _chaiEnzyme.default;
     }],
     execute: function () {
-      console.log(sizeMe);
+      console.log(chaiEnzyme);
       debugger;
 
     }
