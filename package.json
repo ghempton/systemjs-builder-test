@@ -1,12 +1,18 @@
 {
+  "scripts": {
+    "start": "./node_modules/.bin/testem"
+  },
   "jspm": {
     "name": "app",
     "main": "app.js",
     "dependencies": {
-      "chai-enzyme": "npm:chai-enzyme@^0.6.1",
-      "json": "github:systemjs/plugin-json@^0.2.3"
+      "babel-plugin-transform-runtime": "npm:babel-plugin-transform-runtime@^6.23.0",
+      "babel-preset-stage-0": "npm:babel-preset-stage-0@^6.22.0",
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.21"
     },
-    "devDependencies": {},
+    "devDependencies": {
+      "babel-runtime": "npm:babel-runtime@^6.23.0"
+    },
     "peerDependencies": {
       "assert": "npm:jspm-nodelibs-assert@^0.2.0",
       "buffer": "npm:jspm-nodelibs-buffer@^0.2.0",
@@ -44,6 +50,23 @@
           "_stream_transform": "readable-stream/transform"
         }
       },
+      "npm:debug@2.6.1": {
+        "main": "src/browser.js",
+        "jspmNodeConversion": false,
+        "format": "cjs",
+        "map": {
+          "./src/browser.js": {
+            "node": "./src/node.js"
+          },
+          "./node.js": {
+            "browser": "./src/browser.js"
+          },
+          "fs": "@node/fs",
+          "net": "@node/net",
+          "tty": "@node/tty",
+          "util": "@node/util"
+        }
+      },
       "npm:enzyme@2.7.1": {
         "map": {
           "react/addons": "@empty",
@@ -61,13 +84,17 @@
           "buffer": "@empty",
           "process": "@empty"
         }
+      },
+      "npm:ms@0.7.2": {
+        "jspmNodeConversion": false,
+        "format": "cjs"
       }
     }
   },
   "devDependencies": {
-    "jspm": "^0.17.0-beta.38",
-    "systemjs": "^0.20.5",
-    "systemjs-builder": "0.16.2",
+    "jspm": "^0.17.0-beta.39",
+    "systemjs": "^0.20.8",
+    "systemjs-builder": "^0.16.3",
     "testem": "^1.14.3"
   }
 }
